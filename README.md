@@ -26,7 +26,7 @@ npm run preview
 
 ## Deploying
 
-The website is deployed automatically to [GitHub Pages](https://pages.github.com/) using [GitHub actions](https://docs.github.com/en/actions).
+The website is deployed automatically to [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://docs.github.com/en/actions).
 
 ## Contributing
 
