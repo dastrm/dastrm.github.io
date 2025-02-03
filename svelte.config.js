@@ -16,7 +16,7 @@ const config = {
 			handleHttpError: 'warn'
 		},
 		paths: {
-			base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "",
+
 		},
 	}
 };
