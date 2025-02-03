@@ -3,7 +3,7 @@
 </script>
 
 <div class="logo">
-    <img alt="Author logo" src="{base}/dstrassmann.svg" width="50" />
+    <img alt="Author logo" src="{base}/icons/dstrassmann.svg" width="50" />
 </div>
 
 <style lang="scss">

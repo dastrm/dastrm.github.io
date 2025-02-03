@@ -16,4 +16,4 @@ export const description =
 
 export const title = 'David Strassmann';
 
-export const image = `${siteBaseUrl}/dstrassmann.svg`;
+export const image = `${siteBaseUrl}/icons/dstrassmann.svg`;
