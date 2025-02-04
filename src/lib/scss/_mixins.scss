@@ -10,8 +10,9 @@
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
+	max-width: 1080px;
 
-	@include bp.for-iphone-se {
+	/*@include bp.for-iphone-se {
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -28,7 +29,7 @@
 
 	@include bp.for-desktop-up {
 		max-width: 1080px;
-	}
+	}*/
 }
 
 @mixin define-color($title, $color) {

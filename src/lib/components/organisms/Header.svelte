@@ -19,15 +19,15 @@
 </header>
 
 <style lang="scss">
-    @use "$lib/scss/_breakpoints.scss" as bp;
+    //@use "$lib/scss/_breakpoints.scss" as bp;
 
     header {
         position: relative;
         padding: 30px 0;
 
-        @include bp.for-phone-only {
+        /*@include bp.for-phone-only {
             padding: 20px 0;
-        }
+        }*/
 
         &.has-background {
             background: linear-gradient(

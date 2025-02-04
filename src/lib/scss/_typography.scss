@@ -1,4 +1,4 @@
-@use '$lib/scss/_breakpoints.scss' as bp;
+// @use '$lib/scss/_breakpoints.scss' as bp;
 
 a {
 	color: var(--color--text);
@@ -33,9 +33,9 @@ h1 {
 	font-size: 2.5rem;
 	font-weight: 700;
 
-	@include bp.for-phone-only {
+	/*@include bp.for-phone-only {
 		font-size: 2rem;
-	}
+	}*/
 }
 
 h2 {
