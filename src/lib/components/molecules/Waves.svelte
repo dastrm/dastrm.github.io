@@ -53,7 +53,7 @@
         );
         position: absolute;
         width: 100%;
-        height: min(65vh, 500px);
+        height: 600px;
 
         /*@include bp.for-phone-only {
             height: min(75vh, 400px);
@@ -78,20 +78,20 @@
         }
     }
     .parallax > use:nth-child(1) {
-        animation-delay: -2s;
-        animation-duration: 7s;
+        animation-delay: -4s;
+        animation-duration: 14s;
     }
     .parallax > use:nth-child(2) {
-        animation-delay: -3s;
-        animation-duration: 10s;
+        animation-delay: -6s;
+        animation-duration: 20s;
     }
     .parallax > use:nth-child(3) {
-        animation-delay: -4s;
-        animation-duration: 13s;
+        animation-delay: -8s;
+        animation-duration: 26s;
     }
     .parallax > use:nth-child(4) {
-        animation-delay: -5s;
-        animation-duration: 20s;
+        animation-delay: -10s;
+        animation-duration: 40s;
     }
     @keyframes move-forever {
         0% {

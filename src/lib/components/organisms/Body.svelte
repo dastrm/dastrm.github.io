@@ -48,12 +48,13 @@
 
         .hello {
             text-align: center;
+            width: 90%;
         }
 
         .intro {
             font-weight: 500;
             font-size: 1.4rem;
-            width: min(100%, 440px);
+            width: min(90%, 440px);
             display: flex;
             flex-direction: column;
 
@@ -76,7 +77,7 @@
             justify-content: center;
             gap: 10px;
             width: 100%;
-            padding-bottom: 150px;
+            padding-bottom: 250px;
         }
     }
 
@@ -86,6 +87,7 @@
         justify-items: center;
         gap: 50px;
         margin: 0 auto;
+        width: 90%;
         padding-bottom: 50px;
     }
 </style>
