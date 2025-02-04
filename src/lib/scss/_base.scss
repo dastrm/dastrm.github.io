@@ -1,7 +1,9 @@
 // Styles that are used everywhere
 
+@use '$lib/scss/_mixins.scss' as mx;
+
 .container {
-	@include padded-container;
+	@include mx.padded-container;
 }
 
 ul,
@@ -17,6 +19,7 @@ ol {
 		}
 	}
 }
+
 ul {
 	list-style: outside;
 }

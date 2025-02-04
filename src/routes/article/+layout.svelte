@@ -18,7 +18,7 @@
 </div>
 
 <style lang="scss">
-    @import "$lib/scss/_mixins.scss";
+    @use "$lib/scss/_breakpoints.scss" as bp;
 
     .article-layout {
         display: flex;
@@ -42,17 +42,17 @@
         padding-right: 15px;
         padding-left: 15px;
 
-        @include for-iphone-se {
+        @include bp.for-iphone-se {
             padding-left: 0;
             padding-right: 0;
         }
 
-        @include for-tablet-portrait-up {
+        @include bp.for-tablet-portrait-up {
             padding-right: 20px;
             padding-left: 20px;
         }
 
-        @include for-tablet-landscape-up {
+        @include bp.for-tablet-landscape-up {
             padding-right: 30px;
             padding-left: 30px;
         }

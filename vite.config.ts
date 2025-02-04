@@ -6,7 +6,7 @@ export default defineConfig({
         preprocessorOptions: {
 			scss: {
 				// TODO: deal with deprecations instead of hiding them
-				silenceDeprecations: ["import", "mixed-decls"],
+				silenceDeprecations: ["mixed-decls"],
 			},
         },
     },

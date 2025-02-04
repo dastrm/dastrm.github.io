@@ -1,20 +1,20 @@
-@import '$lib/scss/_reset.scss';
-@import '$lib/scss/_variables.scss';
-@import '$lib/scss/_themes.scss';
-@import '$lib/scss/_breakpoints.scss';
-@import '$lib/scss/_functions.scss';
-@import '$lib/scss/_mixins.scss';
-@import '$lib/scss/_base.scss';
-@import '$lib/scss/_typography.scss';
-@import '$lib/scss/_article.scss';
-@import '$lib/scss/animations.scss';
+@use '$lib/scss/_reset.scss';
+@use '$lib/scss/_variables.scss';
+@use '$lib/scss/_themes.scss';
+@use '$lib/scss/_breakpoints.scss';
+@use '$lib/scss/_functions.scss';
+@use '$lib/scss/_mixins.scss';
+@use '$lib/scss/_base.scss';
+@use '$lib/scss/_typography.scss';
+@use '$lib/scss/_article.scss';
+@use '$lib/scss/_animations.scss';
 
-@import '@fontsource/inter';
-@import '@fontsource/inter/600.css';
-@import '@fontsource/inter/700.css';
-@import '@fontsource/merriweather';
-@import '@fontsource/merriweather/900.css';
-@import '@fontsource/ubuntu-mono';
+@use '@fontsource/inter' as inter;
+@use '@fontsource/inter/600.css' as inter-600;
+@use '@fontsource/inter/700.css' as inter-700;
+@use '@fontsource/merriweather' as merriweather;
+@use '@fontsource/merriweather/900.css' as merriweather-900;
+@use '@fontsource/ubuntu-mono' as ubuntu-mono;
 
 body {
 	--body-background-color: var(--color--page-background);

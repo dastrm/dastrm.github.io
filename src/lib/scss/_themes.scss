@@ -1,19 +1,19 @@
-@import '$lib/scss/_mixins.scss';
+@use '$lib/scss/_mixins.scss' as mx;
 
 @mixin base-theme {
-	@include define-color('primary', #1553ff);
-	@include define-color('primary-tint', #f5f7ff);
+	@include mx.define-color('primary', #1553ff);
+	@include mx.define-color('primary-tint', #f5f7ff);
 
-	@include define-color('secondary', #6E29E7);
-	@include define-color('secondary-tint', #f9f6fe);
+	@include mx.define-color('secondary', #6E29E7);
+	@include mx.define-color('secondary-tint', #f9f6fe);
 
-	@include define-color('text', #1c1e26);
-	@include define-color('text-shade', #5d5f65);
-	@include define-color('text-inverse', #ffffff);
-	@include define-color('text-inverse-shade', #9eb4b5);
+	@include mx.define-color('text', #1c1e26);
+	@include mx.define-color('text-shade', #5d5f65);
+	@include mx.define-color('text-inverse', #ffffff);
+	@include mx.define-color('text-inverse-shade', #9eb4b5);
 
-	@include define-color('page-background', #f4f8fb);
-	@include define-color('article-page-background', #f3fbfc);
+	@include mx.define-color('page-background', #f4f8fb);
+	@include mx.define-color('article-page-background', #f3fbfc);
 
 	--color--waves-start: rgba(var(--color--primary-rgb), 0.3);
 	--color--waves-end: rgba(var(--color--primary-rgb), 0.1);
@@ -22,19 +22,19 @@
 }
 
 @mixin dark-theme {
-	@include define-color('primary', #00a2ff);
-	@include define-color('primary-tint', #1d2225);
+	@include mx.define-color('primary', #00a2ff);
+	@include mx.define-color('primary-tint', #1d2225);
 
-	@include define-color('secondary', #9f67ff);
-	@include define-color('secondary-tint', #231934);
+	@include mx.define-color('secondary', #9f67ff);
+	@include mx.define-color('secondary-tint', #231934);
 
-	@include define-color('text', #ffffff);
-	@include define-color('text-shade', #9eb4b5);
-	@include define-color('text-inverse', #1c1e26);
-	@include define-color('text-inverse-shade', #5d5f65);
+	@include mx.define-color('text', #ffffff);
+	@include mx.define-color('text-shade', #9eb4b5);
+	@include mx.define-color('text-inverse', #1c1e26);
+	@include mx.define-color('text-inverse-shade', #5d5f65);
 
-	@include define-color('page-background', #1c1e26);
-	@include define-color('article-page-background', #141519);
+	@include mx.define-color('page-background', #1c1e26);
+	@include mx.define-color('article-page-background', #141519);
 }
 
 :root {

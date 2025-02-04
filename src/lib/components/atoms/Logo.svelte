@@ -7,7 +7,7 @@
 </div>
 
 <style lang="scss">
-    @import "$lib/scss/breakpoints.scss";
+    @use "$lib/scss/_breakpoints.scss" as bp;
 
     .logo {
         width: auto;
@@ -17,7 +17,7 @@
         gap: 16px;
         align-items: center;
 
-        @include for-phone-only {
+        @include bp.for-phone-only {
             gap: 8px;
         }
     }

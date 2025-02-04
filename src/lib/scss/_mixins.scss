@@ -1,8 +1,8 @@
 @use 'sass:color';
 @use 'sass:meta';
 
-@import './_breakpoints.scss';
-@import './_functions.scss';
+@use "$lib/scss/_breakpoints.scss" as bp;
+@use '$lib/scss/_functions.scss' as fn;
 
 @mixin padded-container {
 	width: 100%;
@@ -11,22 +11,22 @@
 	margin-right: auto;
 	margin-left: auto;
 
-	@include for-iphone-se {
+	@include bp.for-iphone-se {
 		padding-left: 0;
 		padding-right: 0;
 	}
 
-	@include for-tablet-portrait-up {
+	@include bp.for-tablet-portrait-up {
 		padding-right: 20px;
 		padding-left: 20px;
 	}
 
-	@include for-tablet-landscape-up {
+	@include bp.for-tablet-landscape-up {
 		padding-right: 30px;
 		padding-left: 30px;
 	}
 
-	@include for-desktop-up {
+	@include bp.for-desktop-up {
 		max-width: 1080px;
 	}
 }
@@ -49,6 +49,6 @@
 	#{color.channel($rgb, "blue")};
 
 	// calculate contrast using luminance
-	$luminance: luminance($color);
+	$luminance: fn.luminance($color);
 	--color--#{$title}-contrast: #{if($luminance > 0.6, var(--color--text), var(--color--text-inverse))};
 }

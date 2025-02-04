@@ -35,7 +35,7 @@
 </section>
 
 <style lang="scss">
-    @import "$lib/scss/breakpoints.scss";
+    @use "$lib/scss/_breakpoints.scss" as bp;
 
     #hero {
         display: flex;
@@ -64,7 +64,7 @@
                 text-align: right;
             }
 
-            @include for-phone-only {
+            @include bp.for-phone-only {
                 display: none;
             }
         }

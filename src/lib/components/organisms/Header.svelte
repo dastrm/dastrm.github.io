@@ -19,13 +19,13 @@
 </header>
 
 <style lang="scss">
-    @import "$lib/scss/breakpoints.scss";
+    @use "$lib/scss/_breakpoints.scss" as bp;
 
     header {
         position: relative;
         padding: 30px 0;
 
-        @include for-phone-only {
+        @include bp.for-phone-only {
             padding: 20px 0;
         }
 

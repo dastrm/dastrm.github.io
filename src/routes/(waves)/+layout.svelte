@@ -42,8 +42,6 @@
 </div>
 
 <style lang="scss">
-    @import "$lib/scss/breakpoints.scss";
-
     #wrap {
         display: flex;
         flex-direction: column;
