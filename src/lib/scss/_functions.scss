@@ -1,6 +1,24 @@
-// Calculate brightness of a given color.
-@function brightness($color) {
-	// @return ((red($color) * 0.299) + (green($color) * 0.587) + (blue($color) * 0.114)) / 255 * 100%;
-	// @return math.div((red($color) * 0.299) + (green($color) * 0.587) + (blue($color) * 0.114), 255);
-	@return calc(((red($color) * 0.299) + (green($color) * 0.587) + (blue($color) * 0.114)) / 255);
+@use 'sass:color';
+@use 'sass:math';
+
+// linearize channels
+@function linearize($channel) {
+	@return if($channel <=0.03928, math.div($channel, 12.92), pow(math.div(($channel + 0.055), 1.055), 2.4));
+}
+
+@function luminance($color) {
+	// convert to RGB space
+	$rgb: color.to-space($color, rgb);
+
+	// extract channels
+	$red: math.div(color.channel($rgb, "red"), 255);
+	$green: math.div(color.channel($rgb, "green"), 255);
+	$blue: math.div(color.channel($rgb, "blue"), 255);
+
+	$r: linearize($red);
+	$g: linearize($green);
+	$b: linearize($blue);
+
+	// calculate weighted sum (W3C formula)
+	@return (0.2126 * $r)+(0.7152 * $g)+(0.0722 * $b);
 }
