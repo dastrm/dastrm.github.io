@@ -2,13 +2,16 @@ name: Build and deploy to GitHub Pages
 
 on:
   pull_request:
-    paths-ignore: &common-ignore
+    paths-ignore:
       - '.gitignore'
       - 'LICENSE'
       - 'README.md'
   push:
     branches: [ main ]
-    paths-ignore: *common-ignore
+    paths-ignore:
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README.md'
   workflow_dispatch:
 
 jobs:
