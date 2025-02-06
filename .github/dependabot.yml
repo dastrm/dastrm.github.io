@@ -10,7 +10,8 @@ updates:
     # Group all updates together
     groups:
       dependencies:
-        patterns: "*"
+        patterns: 
+          - "*"
 
   # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
