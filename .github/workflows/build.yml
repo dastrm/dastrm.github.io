@@ -1,15 +1,22 @@
-name: Deploy to GitHub Pages
+name: Build and deploy to GitHub Pages
 
 on:
+  pull_request:
+    paths-ignore: &common-ignore
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README.md'
   push:
     branches: [ main ]
+    paths-ignore: *common-ignore
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Build static files
         id: build
@@ -22,6 +29,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: build/
+        if: github.event_name == 'push'
 
   deploy:
     needs: build
@@ -32,6 +40,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
