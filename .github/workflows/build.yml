@@ -15,7 +15,9 @@ on:
   workflow_dispatch:
 
 jobs:
+  # Build job
   build:
+    # Specify runner + build & upload the static files as an artifact
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -35,14 +37,22 @@ jobs:
           path: build/
         if: github.event_name == 'push'
 
+  # Deploy job
   deploy:
+    # Add a dependency to the build job
     needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write
-      id-token: write
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
