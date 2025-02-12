@@ -20,18 +20,12 @@
 </section>
 
 <section class="container" id="grid">
-    {#each { length: 5 }}
-        <div><Button href="{base}/article">Article</Button></div>
-    {/each}
-    {#each { length: 10 }}
-        <Button href="https://doi.org/10.3929/ethz-b-000679573">
-            <ExternalLinkIcon slot="icon" />
-            Master thesis
-        </Button>
-    {/each}
-    {#each { length: 5 }}
-        <div><Button href="{base}/article">Article</Button></div>
-    {/each}
+    <Button href="{base}/number-guessing">Number guessing</Button>
+
+    <Button href="https://doi.org/10.3929/ethz-b-000679573">
+        <ExternalLinkIcon slot="icon" />
+        Master thesis
+    </Button>
 </section>
 
 <style lang="scss">

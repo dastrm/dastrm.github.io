@@ -1,7 +1,35 @@
 <script lang="ts">
     import Header from "$lib/components/organisms/Header.svelte";
     import Footer from "$lib/components/organisms/Footer.svelte";
+
+    import {
+        description,
+        image,
+        keywords,
+        title,
+        siteBaseUrl,
+    } from "$lib/data/meta";
+
+    let fullTitle = "Number Guessing - " + title;
 </script>
+
+<svelte:head>
+    <link rel="“canonical”" href={siteBaseUrl} />
+    <meta name="keywords" content={keywords.join(", ")} />
+
+    <meta name="description" content={description} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:description" content={description} />
+
+    <title>{fullTitle}</title>
+    <meta property="og:title" content={fullTitle} />
+    <meta name="twitter:title" content={fullTitle} />
+
+    <meta property="og:image" content={image} />
+    <meta name="twitter:image" content={image} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+</svelte:head>
 
 <div class="article-layout">
     <Header showBackground />
@@ -41,6 +69,7 @@
         padding-bottom: 80px;
         padding-right: 15px;
         padding-left: 15px;
+        text-align: justify;
 
         /*@include bp.for-iphone-se {
             padding-left: 0;

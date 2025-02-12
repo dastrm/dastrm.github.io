@@ -10,6 +10,8 @@
         title,
         siteBaseUrl,
     } from "$lib/data/meta";
+
+    let fullTitle = "Home - " + title;
 </script>
 
 <svelte:head>
@@ -20,9 +22,9 @@
     <meta property="og:description" content={description} />
     <meta name="twitter:description" content={description} />
 
-    <title>{title}</title>
-    <meta property="og:title" content={title} />
-    <meta name="twitter:title" content={title} />
+    <title>{fullTitle}</title>
+    <meta property="og:title" content={fullTitle} />
+    <meta name="twitter:title" content={fullTitle} />
 
     <meta property="og:image" content={image} />
     <meta name="twitter:image" content={image} />
