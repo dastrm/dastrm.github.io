@@ -62,7 +62,7 @@
     {/if}
 {/if}
 
-<style>
+<style lang="scss">
     .solution {
         min-height: 100px;
     }

@@ -134,7 +134,7 @@
     {/each}
 </button>
 
-<style>
+<style lang="scss">
     .card-container {
         position: relative;
         border-radius: 8px;
