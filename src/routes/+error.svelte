@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { base } from "$app/paths";
 	import Header from "$lib/components/organisms/Header.svelte";
 	import Footer from "$lib/components/organisms/Footer.svelte";

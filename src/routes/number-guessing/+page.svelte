@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import NumberGuessing from "$lib/components/molecules/NumberGuessing.svelte";
 
     import ArrowRightIcon from "$lib/icons/fast-arrow-right.svelte";

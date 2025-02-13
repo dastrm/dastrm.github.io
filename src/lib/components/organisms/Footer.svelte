@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import FooterWave from "$lib/icons/footer-wave.svelte";
     import Socials from "$lib/components/molecules/Socials.svelte";
 

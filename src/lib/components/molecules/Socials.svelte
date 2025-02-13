@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import GitHubIcon from "$lib/icons/github.svelte";
 	import EmailIcon from "$lib/icons/email.svelte";
 </script>
