@@ -29,8 +29,6 @@
 </section>
 
 <style lang="scss">
-    //@use "$lib/scss/_breakpoints.scss" as bp;
-
     #hero {
         display: flex;
         flex-direction: column;
@@ -58,10 +56,6 @@
             .right {
                 text-align: right;
             }
-
-            /*@include bp.for-phone-only {
-                display: none;
-            }*/
         }
 
         .ctas {

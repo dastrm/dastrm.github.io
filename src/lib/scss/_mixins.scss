@@ -1,7 +1,6 @@
 @use 'sass:color';
 @use 'sass:meta';
 
-@use "$lib/scss/_breakpoints.scss" as bp;
 @use '$lib/scss/_functions.scss' as fn;
 
 @mixin padded-container {
@@ -11,25 +10,6 @@
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 1080px;
-
-	/*@include bp.for-iphone-se {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-	@include bp.for-tablet-portrait-up {
-		padding-right: 20px;
-		padding-left: 20px;
-	}
-
-	@include bp.for-tablet-landscape-up {
-		padding-right: 30px;
-		padding-left: 30px;
-	}
-
-	@include bp.for-desktop-up {
-		max-width: 1080px;
-	}*/
 }
 
 @mixin define-color($title, $color) {

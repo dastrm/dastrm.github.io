@@ -44,7 +44,6 @@
 </div>
 
 <style lang="scss">
-    //@use "$lib/scss/_breakpoints.scss" as bp;
     .waves-container {
         background: linear-gradient(
             60deg,
@@ -54,10 +53,6 @@
         position: absolute;
         width: 100%;
         height: 600px;
-
-        /*@include bp.for-phone-only {
-            height: min(75vh, 400px);
-        }*/
     }
 
     .waves {

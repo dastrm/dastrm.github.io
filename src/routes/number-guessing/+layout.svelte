@@ -46,8 +46,6 @@
 </div>
 
 <style lang="scss">
-    //@use "$lib/scss/_breakpoints.scss" as bp;
-
     .article-layout {
         display: flex;
         flex-direction: column;
@@ -70,21 +68,6 @@
         padding-right: 15px;
         padding-left: 15px;
         text-align: justify;
-
-        /*@include bp.for-iphone-se {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        @include bp.for-tablet-portrait-up {
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-
-        @include bp.for-tablet-landscape-up {
-            padding-right: 30px;
-            padding-left: 30px;
-        }*/
 
         display: flex;
         flex-direction: column;
