@@ -1,64 +1,45 @@
-<script>
+<script lang="ts">
     import Card from "$lib/components/atoms/Card.svelte";
     import Button from "$lib/components/atoms/Button.svelte";
 
-    export let minValue = 0;
-    export let maxValue = 50;
+    import {
+        getMostSignificantBitPosition,
+        getRandomPermutation,
+    } from "$lib/utils/utils.js";
 
-    export let number = 0;
-    export let guessed = 0;
-    export let revealed = false;
+    export let minNumber: number;
+    export let maxNumber: number;
+    export let number: number;
+    export let guessCount: number;
+    export let revealed: boolean;
 
-    let size = getLargestBit(maxValue);
-    let numbers = getRandomPermutation(size);
+    const size = getMostSignificantBitPosition(maxNumber);
+    let randomSequence = getRandomPermutation(0, size);
 
     let selected = Array.from({ length: size }, () => false);
     let updateKey = 0;
 
-    function getRandomPermutation(size) {
-        return shuffle(Array.from({ length: size }, (_, i) => i));
-    }
-
-    // Fisher-Yates shuffle implementation
-    function shuffle(array) {
-        const newArray = [...array];
-        for (let i = newArray.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-        }
-        return newArray;
-    }
-
-    function getLargestBit(num) {
-        let size = 1;
-        while (num > 1) {
-            num >>= 1;
-            size++;
-        }
-        return size;
-    }
-
     function reveal() {
         number = selected.reduce((acc, val, i) => acc + (val ? 2 ** i : 0), 0);
         revealed = true;
-        guessed += 1;
+        guessCount += 1;
     }
 
     function reset() {
         revealed = false;
         selected.fill(false);
-        numbers = getRandomPermutation(size);
+        randomSequence = getRandomPermutation(0, size);
         updateKey++;
     }
 </script>
 
 <div class="grid">
     {#key updateKey}
-        {#each numbers as n}
+        {#each randomSequence as n}
             <Card
-                bit={n + 1}
-                {minValue}
-                {maxValue}
+                powerOfTwo={n + 1}
+                {minNumber}
+                {maxNumber}
                 bind:selected={selected[n]}
                 {revealed}
             />

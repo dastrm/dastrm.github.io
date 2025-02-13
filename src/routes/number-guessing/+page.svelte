@@ -4,11 +4,11 @@
     import ArrowRightIcon from "$lib/icons/fast-arrow-right.svelte";
     import ArrowDownIcon from "$lib/icons/fast-arrow-down.svelte";
 
-    let minValue = 0;
-    let maxValue = 50;
+    let minNumber = 0;
+    let maxNumber = 50;
 
     let revealed = false;
-    let guessed = 0;
+    let guessCount = 0;
     let number = 0;
 
     let expand = false;
@@ -16,26 +16,26 @@
 
 <h1>Number Guessing</h1>
 <p>
-    Think of a whole number between {minValue} and {maxValue}. Then, select
+    Think of a whole number between {minNumber} and {maxNumber}. Then, select
     every card below which contains your number. When you think you are done,
     double-check and press the guess button.
 </p>
 
 <NumberGuessing
-    bind:minValue
-    bind:maxValue
+    bind:minNumber
+    bind:maxNumber
     bind:number
-    bind:guessed
+    bind:guessCount
     bind:revealed
 />
 
 <div class="solution">
-    <p align="center">
+    <p style:text-align="center">
         {#if revealed}The number you thought of is {number}.{/if}
     </p>
 </div>
 
-{#if guessed >= 3}
+{#if guessCount >= 3}
     <button class="toggle" on:click={() => (expand = !expand)}>
         <div class="icon">
             {#if expand}

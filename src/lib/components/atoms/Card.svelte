@@ -1,18 +1,28 @@
-<script>
+<script lang="ts">
     import { onMount } from "svelte";
 
-    export let bit = 1;
-    export let minValue = 0;
-    export let maxValue = 50;
-    export let cardWidth = 300;
-    export let cardHeight = 100;
-    export let minDistance = 25;
-    export let fontSize = 16;
-    export let selected = false;
-    export let revealed = false;
+    import { getBit, getDimensions } from "$lib/utils/utils.js";
 
-    let numbers = [];
-    let containerRef;
+    export let powerOfTwo: number;
+    export let minNumber: number;
+    export let maxNumber: number;
+    export let selected: boolean;
+    export let revealed: boolean;
+
+    const cardWidth = 300;
+    const cardHeight = 100;
+    const minDistance = 25;
+    const fontSize = 16;
+    const selectedColor = "#00a2ff";
+    const unselectedColor = "transparent";
+
+    let numbers: {
+        value: number;
+        left: string;
+        top: string;
+        fontSize: string;
+    }[];
+    let containerRef: Element;
 
     function handleClick() {
         if (!revealed) {
@@ -20,36 +30,18 @@
         }
     }
 
-    let selectedColor = "#00a2ff";
-    let unselectedColor = "transparent";
-
-    // Calculate actual dimensions based on content
-    function getDimensions(text) {
-        const span = document.createElement("span");
-        span.textContent = text;
-        span.style.position = "absolute";
-        span.style.visibility = "hidden";
-        span.style.overflow = "hidden";
-        span.style.whiteSpace = "nowrap";
-        document.body.appendChild(span);
-        const dimensions = {
-            width: span.offsetWidth,
-            height: span.offsetHeight,
-        };
-        document.body.removeChild(span);
-        return dimensions;
-    }
-
-    function getBit(num, i) {
-        return (num >> (i - 1)) & 1;
-    }
-
     function generateNumbers() {
         numbers = [];
-        const usedPositions = [];
+        const usedPositions: {
+            left: number;
+            right: number;
+            top: number;
+            bottom: number;
+        }[] = [];
 
-        for (let value = minValue; value <= maxValue; value++) {
-            if (getBit(value, bit) == 0) {
+        for (let value = minNumber; value <= maxNumber; value++) {
+            // Skip values which do not belong to this card
+            if (getBit(value, powerOfTwo) == 0) {
                 continue;
             }
 
@@ -116,18 +108,17 @@
     bind:this={containerRef}
     on:click={handleClick}
     class="card-container"
-    style={`width: ${cardWidth}px; height: ${cardHeight}px;`}
+    style:width="{cardWidth}px"
+    style:height="{cardHeight}px"
     style:background-color={selected ? selectedColor : unselectedColor}
 >
     <!-- Number elements -->
     {#each numbers as num}
         <div
             class="number"
-            style={`
-          left: ${num.left};
-          top: ${num.top};
-          font-size: ${num.fontSize};
-        `}
+            style:left={num.left}
+            style:top={num.top}
+            style:font-size={num.fontSize}
         >
             {num.value}
         </div>
