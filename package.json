@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"postbuild": "npx svelte-sitemap --domain https://dastrm.github.io/",
+		"postbuild": "npx svelte-sitemap --domain https://dastrm.github.io/ && shx cp build/404/index.html build/404.html",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -18,6 +18,7 @@
 		"@sveltejs/kit": "^2.17.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"sass-embedded": "^1.83.4",
+		"shx": "^0.3.4",
 		"svelte": "^5.19.9",
 		"svelte-check": "^4.1.4",
 		"svelte-sitemap": "^2.7.0",
