@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    import { getBit, getDimensions } from "$lib/utils/utils.js";
+    import { getBit, getDimensions } from "$lib/utils/utils";
 
     export let powerOfTwo: number;
     export let minNumber: number;

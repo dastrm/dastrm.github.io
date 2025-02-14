@@ -5,7 +5,7 @@
     import {
         getMostSignificantBitPosition,
         getRandomPermutation,
-    } from "$lib/utils/utils.js";
+    } from "$lib/utils/utils";
 
     export let minNumber: number;
     export let maxNumber: number;

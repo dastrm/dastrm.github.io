@@ -1,3 +1,6 @@
+// Checks wheter a string begins with either "http://" or "https://".
+export const HttpRegex = /^((http|https):\/\/)/;
+
 /**
  * Extracts the `k`-th bit from a number `n`.
  * Uses bitwise operations to shift and mask the desired bit.
@@ -6,7 +9,7 @@
  * @param {number} k - The position of the bit to extract (1-indexed).
  * @returns {number} The value of the `k`-th bit (0 or 1).
  */
-export function getBit(n, k) {
+export function getBit(n: number, k: number) {
     return (n >> (k - 1)) & 1;
 }
 
@@ -16,7 +19,7 @@ export function getBit(n, k) {
  * @param {number} n - The number from which to extract the position.
  * @returns {number} The position of the most significant bit (1-indexed).
  */
-export function getMostSignificantBitPosition(n) {
+export function getMostSignificantBitPosition(n: number) {
     return 32 - Math.clz32(n);
 }
 
@@ -28,7 +31,7 @@ export function getMostSignificantBitPosition(n) {
 * @param {number} n - The length of the desired sequential integer array.
 * @returns {Array<number>} A shuffled version of the provided sequential integers.
 */
-export function getRandomPermutation(k, n) {
+export function getRandomPermutation(k: number, n: number) {
     return shuffleArray(getSequentialIntegers(k, n));
 }
 
@@ -39,7 +42,7 @@ export function getRandomPermutation(k, n) {
 * @param {number} n - The length of the desired sequential integer array.
 * @returns {Array<number>} An array containing the specified sequential integers.
 */
-export function getSequentialIntegers(k, n) {
+export function getSequentialIntegers(k: number, n: number) {
     return Array.from({ length: n }, (_, i) => i + k)
 }
 
@@ -49,7 +52,7 @@ export function getSequentialIntegers(k, n) {
 * @param {Array<number>} array - The input array to be shuffled.
 * @returns {Array<number>} A shuffled version of the provided array.
 */
-export function shuffleArray(array) {
+export function shuffleArray(array: number[]) {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -65,7 +68,7 @@ export function shuffleArray(array) {
 * @param {string} text - The text to measure the dimensions for.
 * @returns {{width: number, height: number}} An object containing the width and height of the given text.
 */
-export function getDimensions(text) {
+export function getDimensions(text: string) {
     const span = document.createElement("span");
     span.textContent = text;
     span.style.position = "absolute";
