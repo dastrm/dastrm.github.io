@@ -32,11 +32,11 @@
     #hero {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         gap: 25px;
         position: relative;
         padding: 50px 0;
+        min-height: 600px;
 
         .hello {
             text-align: center;
@@ -65,7 +65,6 @@
             justify-content: center;
             gap: 10px;
             width: 100%;
-            padding-bottom: 250px;
         }
     }
 

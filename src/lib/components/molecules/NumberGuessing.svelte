@@ -47,7 +47,7 @@
     {/key}
 </div>
 
-<div class="grid">
+<div class="centerButton">
     {#if !revealed}
         <Button on:click={reveal}>Guess</Button>
     {:else}
@@ -59,9 +59,17 @@
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        overflow-x: auto;
         gap: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
         justify-items: center;
+    }
+
+    .centerButton {
+        display: grid;
+        justify-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 </style>
