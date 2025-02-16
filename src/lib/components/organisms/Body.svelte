@@ -1,5 +1,6 @@
 <script lang="ts">
     import { base } from "$app/paths";
+    import { masterThesisLink, sourceCodeLink } from "$lib/data/links";
     import Button from "$lib/components/atoms/Button.svelte";
     import GitHubIcon from "$lib/icons/github.svelte";
     import ExternalLinkIcon from "$lib/icons/external-link.svelte";
@@ -12,7 +13,7 @@
         <span class="right">and it is really fast.</span>
     </p>
     <div class="ctas">
-        <Button href="https://github.com/dastrm/dastrm.github.io">
+        <Button href={sourceCodeLink}>
             <GitHubIcon slot="icon" />
             Source code
         </Button>
@@ -22,7 +23,7 @@
 <section class="container" id="grid">
     <Button href="{base}/number-guessing">Number guessing</Button>
 
-    <Button href="https://doi.org/10.3929/ethz-b-000679573">
+    <Button href={masterThesisLink}>
         <ExternalLinkIcon slot="icon" />
         Master thesis
     </Button>

@@ -1,6 +1,7 @@
 <script lang="ts">
     import FooterWave from "$lib/icons/footer-wave.svelte";
     import Socials from "$lib/components/molecules/Socials.svelte";
+    import { iconoirLink, svelteKitLink } from "$lib/data/links";
 
     let currentYear = new Date().getFullYear();
 </script>
@@ -15,14 +16,12 @@
         </div>
         <div class="credits">
             Made with <a
-                href="https://svelte.dev/docs/kit/introduction"
+                href={svelteKitLink}
                 target="_blank"
                 rel="noopener noreferrer">SvelteKit</a
             >. Icons by
-            <a
-                href="https://iconoir.com/"
-                target="_blank"
-                rel="noopener noreferrer">Iconoir</a
+            <a href={iconoirLink} target="_blank" rel="noopener noreferrer"
+                >Iconoir</a
             >.
         </div>
         <div class="socials">

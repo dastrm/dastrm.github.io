@@ -1,23 +1,19 @@
 <script lang="ts">
 	import GitHubIcon from "$lib/icons/github.svelte";
 	import EmailIcon from "$lib/icons/email.svelte";
+	import { gitHubAccountLink, mailLink } from "$lib/data/links";
 </script>
 
 <div class="socials">
 	<a
-		href="https://github.com/dastrm/"
+		href={gitHubAccountLink}
 		target="_blank"
 		rel="noopener noreferrer"
 		title="GitHub profile"
 	>
 		<GitHubIcon />
 	</a>
-	<a
-		href="mailto:dstr4ssmann@gmail.com"
-		target="_blank"
-		rel="noopener noreferrer"
-		title="Email"
-	>
+	<a href={mailLink} target="_blank" rel="noopener noreferrer" title="Email">
 		<EmailIcon />
 	</a>
 </div>

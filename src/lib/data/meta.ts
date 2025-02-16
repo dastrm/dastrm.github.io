@@ -2,7 +2,7 @@
 // So they can be added as suffixes on different pages
 // Via <svelte:head>
 
-export const siteBaseUrl = 'https://dastrm.github.io/';
+import { websiteLink } from "$lib/data/links";
 
 export const keywords = [
 	'Personal Site',
@@ -16,4 +16,4 @@ export const description =
 
 export const title = 'David Strassmann';
 
-export const image = `${siteBaseUrl}/icons/favicon.svg`;
+export const image = `${websiteLink}/icons/favicon.svg`;
