@@ -31,7 +31,13 @@
 
 <div class="solution">
     <p style:text-align="center">
-        {#if revealed}The number you thought of is {number}.{/if}
+        {#if revealed}
+            {#if number < minNumber || number > maxNumber}
+                Your selection of cards is incorrect.
+            {:else}
+                The number you thought of is {number}.
+            {/if}
+        {/if}
     </p>
 </div>
 
