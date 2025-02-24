@@ -6,10 +6,10 @@ updates:
     directory: "/"
     # Check the npm registry for updates every week
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     # Group all updates together
     groups:
-      all-dependencies:
+      all-deps:
         patterns: 
           - "*"
 
@@ -19,4 +19,4 @@ updates:
     # You don't need to specify `/.github/workflows` for `directory`. You can use `directory: "/"`.
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
