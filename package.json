@@ -15,19 +15,19 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.17.2",
+		"@sveltejs/kit": "^2.20.2",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
-		"sass-embedded": "^1.85.0",
-		"shx": "^0.3.4",
-		"svelte": "^5.20.2",
-		"svelte-check": "^4.1.4",
+		"sass-embedded": "^1.86.1",
+		"shx": "^0.4.0",
+		"svelte": "^5.25.5",
+		"svelte-check": "^4.1.5",
 		"svelte-sitemap": "^2.7.0",
-		"typescript": "^5.7.3",
-		"vite": "^6.1.1"
+		"typescript": "^5.8.2",
+		"vite": "^6.2.4"
 	},
 	"dependencies": {
-		"@fontsource/inter": "^5.1.1",
-		"@fontsource/merriweather": "^5.1.1",
-		"@fontsource/ubuntu-mono": "^5.1.1"
+		"@fontsource/inter": "^5.2.5",
+		"@fontsource/merriweather": "^5.2.6",
+		"@fontsource/ubuntu-mono": "^5.2.5"
 	}
 }
