@@ -15,15 +15,15 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.20.2",
+		"@sveltejs/kit": "^2.20.8",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
-		"sass-embedded": "^1.86.1",
+		"sass-embedded": "^1.87.0",
 		"shx": "^0.4.0",
-		"svelte": "^5.25.5",
-		"svelte-check": "^4.1.5",
+		"svelte": "^5.28.2",
+		"svelte-check": "^4.1.6",
 		"svelte-sitemap": "^2.7.0",
-		"typescript": "^5.8.2",
-		"vite": "^6.2.4"
+		"typescript": "^5.8.3",
+		"vite": "^6.3.4"
 	},
 	"dependencies": {
 		"@fontsource/inter": "^5.2.5",
