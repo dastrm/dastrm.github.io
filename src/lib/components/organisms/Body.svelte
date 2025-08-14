@@ -1,6 +1,10 @@
 <script lang="ts">
     import { base } from "$app/paths";
-    import { masterThesisLink, sourceCodeLink } from "$lib/data/links";
+    import {
+        masterThesisLink,
+        ppmAnalysisLink,
+        sourceCodeLink,
+    } from "$lib/data/links";
     import Button from "$lib/components/atoms/Button.svelte";
     import GitHubIcon from "$lib/icons/github.svelte";
     import ExternalLinkIcon from "$lib/icons/external-link.svelte";
@@ -21,11 +25,16 @@
 </section>
 
 <section class="container" id="grid">
-    <Button href="{base}/number-guessing">Number guessing</Button>
-
     <Button href={masterThesisLink}>
         <ExternalLinkIcon slot="icon" />
         Master thesis
+    </Button>
+
+    <Button href="{base}/number-guessing">Number guessing</Button>
+
+    <Button href={ppmAnalysisLink}>
+        <ExternalLinkIcon slot="icon" />
+        PPM analysis
     </Button>
 </section>
 
