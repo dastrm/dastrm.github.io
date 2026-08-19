@@ -31,5 +31,5 @@
 
 	// calculate contrast using luminance
 	$luminance: fn.luminance($color);
-	--color--#{$title}-contrast: #{if($luminance > 0.6, var(--color--text), var(--color--text-inverse))};
+	--color--#{$title}-contrast: #{if(sass($luminance > 0.6): var(--color--text); else: var(--color--text-inverse))};
 }

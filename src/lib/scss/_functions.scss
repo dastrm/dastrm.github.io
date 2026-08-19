@@ -3,7 +3,7 @@
 
 // linearize channels
 @function linearize($channel) {
-	@return if($channel <=0.03928, math.div($channel, 12.92), pow(math.div(($channel + 0.055), 1.055), 2.4));
+	@return if(sass($channel <=0.03928): math.div($channel, 12.92); else: pow(math.div(($channel + 0.055), 1.055), 2.4));
 }
 
 @function luminance($color) {
