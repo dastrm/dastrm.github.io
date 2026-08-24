@@ -32,7 +32,7 @@
 
 <style lang="scss">
     footer {
-        height: 340px;
+        min-height: clamp(260px, 40vw + 150px, 340px);
         width: 100%;
         background: linear-gradient(
             60deg,
@@ -40,7 +40,7 @@
             var(--color--waves-end) 100%
         );
         display: grid;
-        grid-template-rows: 120px 1fr;
+        grid-template-rows: clamp(60px, 10vw, 120px) auto;
 
         .content {
             display: flex;
@@ -48,6 +48,7 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
+            padding: 15px 0 25px;
             font-weight: 600;
             text-align: center;
 

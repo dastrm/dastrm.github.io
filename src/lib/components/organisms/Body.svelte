@@ -43,10 +43,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: clamp(16px, 3vw, 25px);
         position: relative;
-        padding: 50px 0;
-        min-height: 600px;
+        padding: clamp(30px, 5vw, 50px) 0;
+        min-height: var(--hero-min-height);
 
         .hello {
             text-align: center;
@@ -55,7 +55,7 @@
 
         .intro {
             font-weight: 500;
-            font-size: 1.4rem;
+            font-size: clamp(1.1rem, 0.85rem + 1.15vw, 1.4rem);
             width: min(90%, 440px);
             display: flex;
             flex-direction: column;
@@ -80,11 +80,11 @@
 
     #grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(155px, 100%), 1fr));
         justify-items: center;
-        gap: 50px;
+        gap: clamp(20px, 4vw, 50px);
         margin: 0 auto;
         width: 90%;
-        padding-bottom: 50px;
+        padding-bottom: clamp(30px, 5vw, 50px);
     }
 </style>

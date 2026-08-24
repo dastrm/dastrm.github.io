@@ -1,11 +1,11 @@
 <svg
 	width="100%"
-	height="120"
+	height="100%"
 	viewBox="0 0 1440 120"
 	fill="none"
-	style="transform: scale(-1,-1)"
+	style="transform: scale(-1,-1); display: block"
 	xmlns="http://www.w3.org/2000/svg"
-	preserveAspectRatio="xMidYMid slice"
+	preserveAspectRatio="none"
 	class="footer__wave"
 >
 	<path

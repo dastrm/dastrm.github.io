@@ -63,6 +63,7 @@
         padding-right: 15px;
         padding-left: 15px;
         text-align: justify;
+        hyphens: auto;
 
         display: flex;
         flex-direction: column;

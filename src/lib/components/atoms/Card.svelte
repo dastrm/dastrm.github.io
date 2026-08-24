@@ -31,6 +31,9 @@
     }
 
     function generateNumbers() {
+        // use the rendered width so numbers stay visible when max-width: 100%
+        // shrinks the card below cardWidth on narrow viewports
+        const usableWidth = containerRef?.clientWidth || cardWidth;
         numbers = [];
         const usedPositions: {
             left: number;
@@ -54,7 +57,7 @@
             let attempts = 0;
             while (!positionFound) {
                 // Generate new position
-                const left = Math.random() * (cardWidth - width);
+                const left = Math.random() * (usableWidth - width);
                 const top = Math.random() * (cardHeight - height);
 
                 // Create bounding rectangle
@@ -128,6 +131,8 @@
 <style lang="scss">
     .card-container {
         position: relative;
+        // guard against the inline 300px width overflowing narrow viewports
+        max-width: 100%;
         border-radius: 8px;
         padding: 16px;
         overflow: hidden;

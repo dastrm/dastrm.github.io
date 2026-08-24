@@ -51,8 +51,9 @@
 
 <style lang="scss">
     .theme-toggle {
-        height: 24px;
-        padding: 0;
+        height: 44px;
+        padding: 10px;
+        margin: -10px;
         appearance: none;
         border: none;
         background: none;

@@ -52,7 +52,7 @@
         );
         position: absolute;
         width: 100%;
-        min-height: 600px;
+        min-height: var(--hero-min-height);
     }
 
     .waves {

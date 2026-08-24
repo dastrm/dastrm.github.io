@@ -64,7 +64,7 @@
 		border: none;
 		border-radius: 20px;
 		font-weight: 700;
-		white-space: nowrap;
+		text-align: center;
 
 		.icon {
 			width: 24px;

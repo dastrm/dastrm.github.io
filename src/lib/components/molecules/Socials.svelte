@@ -26,7 +26,10 @@
 
 		a {
 			transition: all 0.2s ease-in-out;
-			width: 24px;
+			display: flex;
+			width: 44px;
+			padding: 10px;
+			margin: -10px;
 			color: var(--color--text);
 			fill: var(--color--text);
 

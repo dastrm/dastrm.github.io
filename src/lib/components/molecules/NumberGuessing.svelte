@@ -58,7 +58,7 @@
 <style lang="scss">
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
         overflow-x: auto;
         gap: 20px;
         padding-top: 20px;

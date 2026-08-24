@@ -34,7 +34,7 @@
 		padding-top: 25px;
 
 		.svg-wrapper {
-			width: 300px;
+			width: min(300px, 80vw);
 			margin-top: -60px;
 			margin-bottom: -30px;
 

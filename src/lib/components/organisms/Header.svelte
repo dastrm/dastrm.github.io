@@ -21,7 +21,7 @@
 <style lang="scss">
     header {
         position: relative;
-        padding: 30px 0;
+        padding: clamp(16px, 3vw, 30px) 0;
 
         &.has-background {
             background: linear-gradient(
@@ -53,7 +53,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            gap: 30px;
+            gap: clamp(20px, 3vw, 30px);
         }
     }
 </style>
